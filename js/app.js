@@ -16,7 +16,6 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-  // first bug found here
   likedPostsId.push(id);
   showPosts(posts);
 };
@@ -29,7 +28,6 @@ const reportPost = (id) => {
   showPosts(remainingPosts);
 };
 
-// third bug founds
 const displayContent = (text) => {
   return text.length < 30
     ? text
@@ -56,7 +54,6 @@ const switchTab = (id) => {
   }
 };
 
-// second bug founds inside createPost function inside of post_profile class and fourth founds inside post_description
 const createPost = (post) => {
   const image = post.image;
   const div = document.createElement('article');
@@ -69,7 +66,6 @@ const createPost = (post) => {
                     target="_blank"
                     class="post__avatar"
                   >
-
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="User Picture" />
                   </a>
                   <a href="#" class="post__user">phero</a>
@@ -155,7 +151,6 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
-  // sixth bug found
   const likedContainer = document.getElementById('liked');
   likedContainer.innerHTML = '';
   const likedPosts = getLikedPosts();
@@ -166,11 +161,9 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
-  // sixth bug found
   const reportedContainer = document.getElementById('reported');
   reportedContainer.innerHTML = '';
   const reportedPosts = getReportedPosts();
-  // fifth bug founds
   reportedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById('reported').appendChild(div);
