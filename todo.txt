@@ -1,0 +1,11 @@
+1.like btn
+2.profile pic on top of the card
+3.description box
+4.comments
+5.report posts
+6.liked posts
+7.section before footer> 
+	q1= how js works?
+	q2= what does js event loop works
+	q3= localstorage vs sessionstorage
+
